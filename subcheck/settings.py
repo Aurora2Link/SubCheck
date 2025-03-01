@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'subcheck.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sub_check',  # Cambia al nombre de tu BD
-        'USER': 'root',  # Usuario de MySQL
-        'PASSWORD': 'pito1223',  # Contraseña de MySQL
-        'HOST': '127.0.0.1',  # Localhost
-        'PORT': '3306',  # Puerto de MySQL
+        'NAME': os.environ["MYSQL_DATABASE"],  # Cambia al nombre de tu BD
+        'USER': os.environ["MYSQLUSER"],  # Usuario de MySQL
+        'PASSWORD': os.environ["MYSQLPASSWORD"],  # Contraseña de MySQL
+        'HOST': os.environ["MYSQLHOST"],  # Localhost
+        'PORT': os.environ["MYSQLPORT"],  # Puerto de MySQL
     }
 }
 
