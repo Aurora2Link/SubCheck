@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import check_subscription
+from . import views
 
 urlpatterns = [
-    path('api/check_subscription/', check_subscription, name='check_subscription'),
+    path('check_subscription/', views.check_subscription, name='check_subscription'),
 ]
